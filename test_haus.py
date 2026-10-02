@@ -13,7 +13,8 @@ class HouseTest(unittest.TestCase):
         # Wird vor jedem Test ausgefuehrt: frische Welt und fertiges Haus erstellen
         self.welt = World()
         x, y, z = self.welt.player_position(as_int=True)
-        self.haus = House((x + 2, y, z + 3), self.welt)
+        # Haus auf Bodenhohe (y - 1) erstellen, damit es nicht schwebt
+        self.haus = House((x + 2, y - 1, z + 3), self.welt)
         self.haus.build()
 
     def test_change_wall_material(self):

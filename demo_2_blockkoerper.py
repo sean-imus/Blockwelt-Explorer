@@ -12,10 +12,12 @@ def b_gedrueckt(welt: World):
     x, y, z = welt.player_position(as_int=True)
 
     # Der Koerper soll 3 Bloecke in x, 4 Bloecke in y und 5 Bloecke in z gross sein.
-    # Deshalb: x bleibt x+2 bis x+4 (3 Bloecke), y von y bis y+3 (4 Bloecke),
+    # Deshalb: x bleibt x+2 bis x+4 (3 Bloecke), y von y-1 bis y+2 (4 Bloecke),
     # z von z+2 bis z+6 (5 Bloecke).
-    x1, y1, z1 = x + 2, y, z + 2          # vordere untere Ecke
-    x2, y2, z2 = x + 4, y + 3, z + 6      # hintere obere Ecke
+    # player_position() liegt beim Stehen auf dem Boden genau EINEN Block
+    # ueber der Bodenoberflaeche - daher y - 1 als unterste Reihe.
+    x1, y1, z1 = x + 2, y - 1, z + 2      # vordere untere Ecke
+    x2, y2, z2 = x + 4, y + 2, z + 6      # hintere obere Ecke
 
     # Unterer Teil (2 Bloecke hoch) aus Stein
     welt.setBlocks(x1, y1, z1, x2, y1 + 1, z2, "default:stone")

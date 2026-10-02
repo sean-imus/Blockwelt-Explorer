@@ -10,8 +10,10 @@ def b_gedrueckt(welt: World):
     # Position des Spielers holen (als ganze Zahlen)
     x, y, z = welt.player_position(as_int=True)
 
-    # Haus mit etwas Abstand zum Spieler bauen (Spieler steht dann vor der Tuer)
-    haus = House((x + 2, y, z + 3), welt)
+    # Haus mit etwas Abstand zum Spieler bauen (Spieler steht dann vor der Tuer).
+    # player_position() liegt beim Stehen auf dem Boden genau EINEN Block
+    # ueber der Bodenoberflaeche - daher y - 1, damit das Haus nicht schwebt.
+    haus = House((x + 2, y - 1, z + 3), welt)
     haus.build()
 
 

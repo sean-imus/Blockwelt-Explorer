@@ -11,21 +11,24 @@ def b_gedrueckt(welt: World):
     # Position des Spielers holen (als ganze Zahlen)
     x, y, z = welt.player_position(as_int=True)
 
+    # player_position() liegt beim Stehen auf dem Boden genau EINEN Block
+    # ueber der Bodenoberflaeche - daher y - 1, damit die Waende nicht schweben.
+
     # Wand mit Fenster, ungedreht
-    fenster_1 = WallWithWindow((x + 2, y, z + 2), welt)
+    fenster_1 = WallWithWindow((x + 2, y - 1, z + 2), welt)
     fenster_1.build()
 
     # Wand mit Fenster, gedreht
-    fenster_2 = WallWithWindow((x + 10, y, z + 2), welt)
+    fenster_2 = WallWithWindow((x + 10, y - 1, z + 2), welt)
     fenster_2.rotated = True
     fenster_2.build()
 
     # Wand mit Tuer, ungedreht
-    tuer_1 = WallWithDoor((x + 2, y, z + 9), welt)
+    tuer_1 = WallWithDoor((x + 2, y - 1, z + 9), welt)
     tuer_1.build()
 
     # Wand mit Tuer, gedreht
-    tuer_2 = WallWithDoor((x + 10, y, z + 9), welt)
+    tuer_2 = WallWithDoor((x + 10, y - 1, z + 9), welt)
     tuer_2.rotated = True
     tuer_2.build()
 

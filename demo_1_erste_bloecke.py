@@ -10,11 +10,14 @@ def b_gedrueckt(welt: World):
     # Position des Spielers holen (als ganze Zahlen)
     x, y, z = welt.player_position(as_int=True)
 
-    # Vier unterschiedliche Bloecke nebeneinander vor dem Spieler platzieren
-    welt.setBlock(x + 2, y, z + 2, "default:brick")   # Ziegel
-    welt.setBlock(x + 3, y, z + 2, "default:stone")   # Stein
-    welt.setBlock(x + 4, y, z + 2, "default:sand")    # Sand
-    welt.setBlock(x + 5, y, z + 2, "default:grass")   # Gras
+    # Vier unterschiedliche Bloecke nebeneinander vor dem Spieler platzieren.
+    # Wichtig: player_position() liefert beim Stehen auf dem Boden die Hoehe
+    # genau EINEN Block ueber der Bodenoberflaeche. Damit nichts in der Luft
+    # schwebt, wird immer y - 1 als unterste Reihe benutzt.
+    welt.setBlock(x + 2, y - 1, z + 2, "default:brick")   # Ziegel
+    welt.setBlock(x + 3, y - 1, z + 2, "default:stone")   # Stein
+    welt.setBlock(x + 4, y - 1, z + 2, "default:sand")    # Sand
+    welt.setBlock(x + 5, y - 1, z + 2, "default:grass")   # Gras
 
 
 # Neue Welt erstellen und die Funktion fuer die Bauen-Taste (b) zuweisen
