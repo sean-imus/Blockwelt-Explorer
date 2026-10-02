@@ -1,7 +1,7 @@
 # Meilenstein 4: Wand mit Türausschnitt
 # Erbt ebenfalls von Wall (Vererbung).
 from pyblockworld import World
-from wand import Wall
+from class_wall import Wall
 
 
 class WallWithDoor(Wall):

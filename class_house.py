@@ -3,10 +3,10 @@
 # (links und rechts), einer massiven Wand (hinten) und einem Dach.
 # Sichtbarkeiten wie im Klassendiagramm: Waende/Dach/pos public, bw private.
 from pyblockworld import World
-from wand import Wall
-from wand_mit_fenster import WallWithWindow
-from wand_mit_tuer import WallWithDoor
-from dach import Roof
+from class_wall import Wall
+from class_wall_with_window import WallWithWindow
+from class_wall_with_door import WallWithDoor
+from class_roof import Roof
 
 
 class House:

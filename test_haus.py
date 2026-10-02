@@ -4,7 +4,7 @@
 # Hinweis: Beim Test oeffnet sich kurz ein Spiel-Fenster.
 import unittest
 from pyblockworld import World
-from haus import House
+from class_house import House
 
 
 class HouseTest(unittest.TestCase):

@@ -33,13 +33,13 @@ uv run python -m unittest test_haus.py       # MS 7: Testklasse HouseTest
 |---|---|
 | `demo_1_erste_bloecke.py` | Meilenstein 1: unterschiedliche Blöcke auf Knopfdruck |
 | `demo_2_blockkoerper.py` | Meilenstein 2: Blockkörper 3×4×5 mit verschiedenen Materialien |
-| `wand.py` | Klasse `Wall` (Meilenstein 3) |
+| `class_wall.py` | Klasse `Wall` (Meilenstein 3) |
 | `demo_3_waende.py` | Meilenstein 3: zwei Wände, eine gedreht |
-| `wand_mit_fenster.py` | Klasse `WallWithWindow` (Meilenstein 4) |
-| `wand_mit_tuer.py` | Klasse `WallWithDoor` (Meilenstein 4) |
+| `class_wall_with_window.py` | Klasse `WallWithWindow` (Meilenstein 4) |
+| `class_wall_with_door.py` | Klasse `WallWithDoor` (Meilenstein 4) |
 | `demo_4_fenster_und_tuer.py` | Meilenstein 4: vier Wände |
-| `dach.py` | Klasse `Roof` (Meilenstein 6) |
-| `haus.py` | Klasse `House` (Meilenstein 7) |
+| `class_roof.py` | Klasse `Roof` (Meilenstein 6) |
+| `class_house.py` | Klasse `House` (Meilenstein 7) |
 | `main.py` | Fertiges Programm: Haus auf Knopfdruck |
 | `test_haus.py` | Klasse `HouseTest` mit `test_change_wall_material` |
 
@@ -52,7 +52,7 @@ Der Pfeil mit der offenen (leeren) Pfeilspitze von `WallWithWindow` und `WallWit
 `WallWithWindow` und `WallWithDoor` erben alle Attribute und Methoden von `Wall`
 (`pos`, `width`, `height`, `rotated`, `material_id`, `build()`), ergänzen je ein eigenes Attribut
 (`window_material_id` bzw. `door_material_id`) und überschreiben `build()`, um zusätzlich das
-Fenster bzw. die Tür auszuschnenden. In Python steht das Schlüsselwort `super().__init__(...)`
+Fenster bzw. die Tür auszuschneiden. In Python steht das Schlüsselwort `super().__init__(...)`
 für den Aufruf des Konstruktors der Basisklasse.
 
 ### Bedeutung der Raute (Meilenstein 6)

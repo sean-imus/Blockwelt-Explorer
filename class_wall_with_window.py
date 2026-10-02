@@ -1,7 +1,7 @@
 # Meilenstein 4: Wand mit Fensterausschnitt
 # Erbt von Wall (Pfeil im Klassendiagramm = Vererbung: "ist eine" Wall).
 from pyblockworld import World
-from wand import Wall
+from class_wall import Wall
 
 
 class WallWithWindow(Wall):

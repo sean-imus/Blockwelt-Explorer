@@ -3,7 +3,7 @@
 # Fenstern, eine massive Wand und ein Dach).
 # Starten mit: uv run python main.py
 from pyblockworld import World
-from haus import House
+from class_house import House
 
 
 def b_gedrueckt(welt: World):

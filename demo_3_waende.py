@@ -2,7 +2,7 @@
 # Spielers platziert - eine ungedreht und eine um 90 Grad um die Y-Achse gedreht.
 # Starten mit: uv run python demo_3_waende.py
 from pyblockworld import World
-from wand import Wall
+from class_wall import Wall
 
 
 def b_gedrueckt(welt: World):

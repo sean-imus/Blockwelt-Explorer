@@ -3,8 +3,8 @@
 # Insgesamt also vier Waende (2x mit Fenster, 2x mit Tuer).
 # Starten mit: uv run python demo_4_fenster_und_tuer.py
 from pyblockworld import World
-from wand_mit_fenster import WallWithWindow
-from wand_mit_tuer import WallWithDoor
+from class_wall_with_window import WallWithWindow
+from class_wall_with_door import WallWithDoor
 
 
 def b_gedrueckt(welt: World):
