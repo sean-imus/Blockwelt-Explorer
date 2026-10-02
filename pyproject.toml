@@ -1,0 +1,12 @@
+[project]
+name = "blockwelt-explorer"
+version = "0.1.0"
+description = "Schulprojekt ITF25 - Blockwelt-Explorer: modulare Häuser auf Knopfdruck (LF8)"
+readme = "README.md"
+authors = [
+    { name = "Sean Tietz", email = "sean.tietz2@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pyblockworld>=0.3.8.2",
+]
